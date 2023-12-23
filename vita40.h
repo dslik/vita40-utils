@@ -10,17 +10,34 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-// Definitions
+// Permitted VITA 40 Indicator Colours
+#define	vita40_red 				40, 0,  0
+#define	vita40_white			40, 40, 20
+#define	vita40_blue				0,  0,  20
+#define	vita40_amber			40, 40, 0
+#define	vita40_green			0,  40, 0
+
+// Permitted VITA 40 Indicator Colours and Behaviours
 #define	vita40_off				0,  0,  0
-#define	vita40_red_steady		10, 0,  0
-#define	vita40_white_fast		8,  8,  10
-#define	vita40_blue_steady		0,  0,  10
-#define	vita40_amber_slow		10, 10, 0
-#define	vita40_amber_steady		10, 10, 0
-#define	vita40_green_standby	0,  10, 0
-#define	vita40_green_steady		0,  10, 0
-#define	vita40_green_slow		0,  10, 0
-#define	vita40_green_feedback	0,  10, 0
+#define	vita40_red_steady		vita40_red
+#define	vita40_white_fast		vita40_white
+#define	vita40_blue_steady		vita40_blue
+#define	vita40_amber_steady		vita40_amber
+#define	vita40_amber_slow		vita40_amber
+#define	vita40_green_steady		vita40_green
+#define	vita40_green_standby	vita40_green
+#define	vita40_green_slow		vita40_green
+#define	vita40_green_feedback	vita40_green
+
+// Non-permitted VITA 40 Indicator Colours and Behaviours
+#define	vita40_red_slow			vita40_red
+#define	vita40_red_fast			vita40_red
+#define	vita40_white_steady		vita40_white
+#define	vita40_white_slow		vita40_white
+#define	vita40_blue_slow		vita40_blue
+#define	vita40_blue_fast		vita40_blue
+#define	vita40_amber_fast		vita40_amber
+#define	vita40_green_fast		vita40_green
 
 // Prototypes
 uint32_t vita40_to_urgb(char* vita40_state, uint32_t counter);
